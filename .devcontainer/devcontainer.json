@@ -21,38 +21,32 @@
 				{
 					"source": "${localEnv:HOME}/.gitconfig",
 					"target": "/home/node/.gitconfig",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				},
 				{
 					"source": "${localEnv:HOME}/.ssh",
 					"target": "/home/node/.ss",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				},
 				{
 					"source": "${localEnv:HOME}/.ssh/known_hosts",
 					"target": "/home/node/.ssh/known_hosts",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				},
 				{
 					"source": "${localEnv:HOME}/.bashrc",
 					"target": "/home/node/.bashrc",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				},
 				{
 					"source": "${localEnv:HOME}/.bash_history",
 					"target": "/home/node/.bash_history",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				},
 				{
 					"source": "${localEnv:HOME}/.zsh_history",
 					"target": "/home/node/.zsh_history",
-					"type": "bind",
-					"consistency": "cached"
+					"type": "bind"
 				}
 			]
 
