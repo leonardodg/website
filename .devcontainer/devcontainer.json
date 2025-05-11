@@ -1,17 +1,41 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+// See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "Node.js",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	"name": "Frontend Dev Container to website LeoDG",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "node",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/common-utils:2": {},
 		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
 		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {}
-	}
+	},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	// Mounts are used to share configuration files and SSH keys between the host and the container.
+	"mounts": [
+				{
+					"source": "${localEnv:HOME}/.gitconfig",
+					"target": "/home/node/.gitconfig",
+					"type": "bind",
+					"consistency": "cached"
+				},
+				{
+					"source": "${localEnv:HOME}/.ssh/id_ed25519",
+					"target": "/home/node/.ssh/id_ed25519",
+					"type": "bind",
+					"consistency": "cached"
+				},
+				{
+					"source": "website-bashhistory",
+					"target": "/commandhistory",
+					"type": "volume"
+				}
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -22,6 +46,4 @@
 	// Configure tool-specific properties.
 	// "customizations": {},
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }
