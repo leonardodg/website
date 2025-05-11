@@ -25,17 +25,42 @@
 					"consistency": "cached"
 				},
 				{
+					"source": "${localEnv:HOME}/.git-credentials",
+					"target": "/home/node/.git-credentials",
+					"type": "bind",
+					"consistency": "cached"
+				},
+				{
+					"source": "${localEnv:HOME}/.ssh/known_hosts",
+					"target": "/home/node/.ssh/known_hosts",
+					"type": "bind",
+					"consistency": "cached"
+				},
+				{
 					"source": "${localEnv:HOME}/.ssh/id_ed25519",
 					"target": "/home/node/.ssh/id_ed25519",
 					"type": "bind",
 					"consistency": "cached"
 				},
+								{
+					"source": "${localEnv:HOME}/.bashrc",
+					"target": "/home/node/.bashrc",
+					"type": "bind",
+					"consistency": "cached"
+				},
 				{
-					"source": "website-bashhistory",
-					"target": "/commandhistory",
-					"type": "volume"
-				}
-	]
+					"source": "${localEnv:HOME}/.bash_history",
+					"target": "/home/node/.bash_history",
+					"type": "bind",
+					"consistency": "cached"
+				},
+				{
+					"source": "${localEnv:HOME}/.zsh_history",
+					"target": "/home/node/.zsh_history",
+					"type": "bind",
+					"consistency": "cached"
+				},
+			]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
