@@ -1,7 +1,9 @@
 FROM node:18
 
 # Install basic development tools
-RUN apt update && apt install -y less man-db sudo
+RUN apt update && apt install -y less man-db sudo git curl \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Ensure default `node` user has access to `sudo`
 ARG USERNAME=node
@@ -17,3 +19,9 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
     && chown -R $USERNAME /commandhistory \
     && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
 
+# Configurar npm global para o usuário node
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+ENV PATH=$PATH:/home/node/.npm-global/bin
+
+# Expor a porta 3000 para o localhost
+EXPOSE 3000

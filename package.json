@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "website Leodg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/style.css --watch",
+    "build": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/css/style.css",
+    "start": "npx http-server -p 3000 dist"
+  },
+  "keywords": [],
+  "author": "Leodg",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "autoprefixer": "^10.4.21",
+    "http-server": "^14.1.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.6"
+  }
+}
