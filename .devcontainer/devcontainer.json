@@ -25,8 +25,8 @@
 					"consistency": "cached"
 				},
 				{
-					"source": "${localEnv:HOME}/.git-credentials",
-					"target": "/home/node/.git-credentials",
+					"source": "${localEnv:HOME}/.ssh",
+					"target": "/home/node/.ss",
 					"type": "bind",
 					"consistency": "cached"
 				},
