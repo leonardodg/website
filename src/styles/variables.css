@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #3490dc;
+  --secondary-color: #ffed4a;
+  --danger-color: #e3342f;
+  --success-color: #38c172;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --spacing-unit: 8px;
+  --border-radius: 0.25rem;
+}

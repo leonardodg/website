@@ -35,7 +35,7 @@
 				},
 				{
 					"source": "${localEnv:HOME}/.ssh",
-					"target": "/home/node/.ss",
+					"target": "/home/node/.ssh",
 					"type": "bind"
 				},
 				{
@@ -58,8 +58,7 @@
 					"target": "/home/node/.zsh_history",
 					"type": "bind"
 				}
-			]
-
+			],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
