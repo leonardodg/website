@@ -17,6 +17,7 @@
 		"bradlc.vscode-tailwindcss",
 		"esbenp.prettier-vscode"
 	],
+	
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
