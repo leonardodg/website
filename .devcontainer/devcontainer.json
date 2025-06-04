@@ -65,7 +65,11 @@
 			// Add the IDs of extensions you want to install.
 			"extensions": [
 				"esbenp.prettier-vscode",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"ms-vscode-remote.remote-containers",
+				"formulahendry.auto-close-tag",
+				"formulahendry.auto-rename-tag",
+				"xabikos.JavaScriptSnippets"
 			],
 			// Add custom VS Code settings.
 			"settings": {
