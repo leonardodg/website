@@ -14,6 +14,7 @@
     "watch:all": "concurrently \"npm run watch:css\" \"npm run watch:html\"",
     "build:html": "copyfiles -u 1 \"src/*.html\" dist",
     "build:css": "npx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/css/main.css",
+    "build:js": "esbuild src/scripts/main.js --bundle --outfile=dist/js/main.js --minify",
     "build": "npm run clean && npm run build:html && npm run build:css",
     "watch": "npm run build && concurrently \"npm run watch:all\" \"npm-watch\"",
     "start": "npx http-server ./dist -o -p 3000"
@@ -29,6 +30,7 @@
     "copy-and-watch": "^0.1.8",
     "copyfiles": "^2.4.1",
     "del-cli": "^6.0.0",
+    "esbuild": "^0.25.5",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
