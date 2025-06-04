@@ -1,29 +1,29 @@
 /* Custom components using the variables */
 @layer components {
-    .btn {
-        padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
-        border-radius: var(--border-radius);
-        font-family: var(--font-main);
-        transition: all 0.3s ease;
-    }
+  .btn {
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    transition: all 0.3s ease;
+  }
 
-    .btn-primary {
-        background-color: var(--primary-color);
-        color: white;
-    }
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
 
-    .btn-primary:hover {
-        background-color: color-mix(in srgb, var(--primary-color), black 10%);
-    }
+  .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--primary-color), black 10%);
+  }
 
-    .btn-secondary {
-        background-color: var(--secondary-color);
-        color: #333;
-    }
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    color: #333;
+  }
 
-    .card-custom {
-        border-radius: var(--border-radius);
-        padding: calc(var(--spacing-unit) * 3);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  .card-custom {
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }

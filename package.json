@@ -6,6 +6,8 @@
   "scripts": {
     "lint": "eslint src --ext .js",
     "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "format:check": "prettier --check \"src/**/*.{js,css,html}\"",
     "clean": "del-cli --force \"dist\"",
     "watch:css": "npx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/css/main.css --watch",
     "watch:html": "copy-and-watch --watch \"src/*.html\" dist",
