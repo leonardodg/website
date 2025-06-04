@@ -14,4 +14,5 @@ document.addEventListener('click', function () {
   }
 });
 
+menu.classList.add('hidden');
 console.log(hello);
