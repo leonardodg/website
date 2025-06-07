@@ -1,18 +1,38 @@
-const btn = document.getElementById('user-menu-button');
-const menu = document.getElementById('user-menu-dropdown');
+console.log('Starting the application...');
 
-const hello = 'Hello, World!';
+const btnDarkMode = document.querySelector('#theme-toggle');
+const btnMenu = document.querySelector('#menu-toggle');
+const menu = document.querySelector('#menu');
 
-btn.addEventListener('click', function (e) {
-  e.stopPropagation();
-  menu.classList.toggle('hidden');
-});
+// TODO: Mode Dark/Light
+btnDarkMode.onclick = () => document.documentElement.classList.toggle('dark');
 
-document.addEventListener('click', function () {
-  if (!menu.classList.contains('hidden')) {
+// TODO: Menu Toggle
+btnMenu.onclick = () => menu.classList.toggle('hidden');
+
+// TODO: Add a click event listener to the menu outside the menu
+document.onclick = (e) => {
+  if (!menu.contains(e.target) && !btnMenu.contains(e.target)) {
     menu.classList.add('hidden');
   }
-});
+};
 
-menu.classList.add('hidden');
-console.log(hello);
+// TODO: Back to the top of the page
+const backToTop = document.querySelector('#back-to-top');
+
+window.onscroll = () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.remove('hidden');
+  } else {
+    backToTop.classList.add('hidden');
+  }
+};
+
+backToTop.onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// TODO: Dynamic Year in Footer
+const dataYear = new Date().getFullYear();
+const elementYear = document.querySelector('#current-year');
+elementYear.textContent = dataYear;
