@@ -1,0 +1,133 @@
+@layer grid {
+  /* ------------------------------------------
+   Grid Layout Styles
+   This section defines the styles for a grid layout
+   with responsive design and specific item styles.
+   Each grid item has a unique background color.
+   The grid is designed to adapt to different screen sizes
+   while maintaining a consistent layout.
+   The grid items are styled with padding, border,
+   border-radius, and text alignment.
+   The grid uses CSS Grid properties to create a flexible
+   and responsive layout that adjusts based on the number
+   of items and available space.
+   The grid-template-columns and grid-template-rows
+   properties ensure that the items are displayed in a
+   structured manner, filling the available space
+   efficiently.
+   The use of repeat() and minmax() functions allows
+   for a dynamic grid that can adapt to various screen
+   sizes, ensuring that the items are displayed
+   appropriately without overflowing or leaving too much
+   empty space.
+   The grid layout is particularly useful for displaying
+   collections of items, such as images, cards, or
+   other content, in a visually appealing and organized
+   manner.      
+
+// ------------------------------------------ */
+
+  .grid-container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 50px;
+  }
+
+  .item-grid {
+    padding: 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .item-grid:nth-child(1) {
+    background-color: LightBlue;
+  }
+
+  .item-grid:nth-child(2) {
+    background-color: LightGreen;
+  }
+
+  .item-grid:nth-child(3) {
+    background-color: LightCoral;
+  }
+
+  .item-grid:nth-child(4) {
+    background-color: LightGoldenRodYellow;
+  }
+
+  .item-grid:nth-child(5) {
+    background-color: LightPink;
+  }
+
+  .item-grid:nth-child(6) {
+    background-color: LightSalmon;
+  }
+}
+
+@layer flex {
+  /* ------------------------------------------
+   Flexbox Layout Styles
+   This section defines the styles for a flexbox layout
+   with specific item styles. The flex container is set
+   to display as a flexbox with a gap between items.
+   Each item has a defined height and width, along with
+   padding, border, and border-radius for styling.
+   The items are given unique background colors to
+   differentiate them visually. The flexbox layout allows
+   for flexible arrangement of items, adapting to the
+   available space while maintaining the specified gap.
+   The justify-content property is used to distribute the
+   items evenly within the container.
+   This layout is particularly useful for creating
+   responsive designs that require items to be aligned
+   in a row or column with consistent spacing.
+
+// ------------------------------------------ */
+
+  .flex-container {
+    display: flex;
+    gap: 16px;
+
+    height: 400px;
+    width: 100%;
+
+    background-color: #bbb;
+
+    justify-content: space-around;
+  }
+
+  .item-flex {
+    padding: 16px;
+
+    hight: 100px;
+    width: 100px;
+
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+
+  .item-flex:nth-child(1) {
+    background-color: LightBlue;
+  }
+
+  .item-flex:nth-child(2) {
+    background-color: LightGreen;
+  }
+
+  .item-flex:nth-child(3) {
+    background-color: LightCoral;
+  }
+
+  .item-flex:nth-child(4) {
+    background-color: LightGoldenRodYellow;
+  }
+
+  .item-flex:nth-child(5) {
+    background-color: LightPink;
+  }
+
+  .item-flex:nth-child(6) {
+    background-color: LightSalmon;
+  }
+}
