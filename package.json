@@ -25,7 +25,7 @@
     "build": "npm run prebuild && npm run build:html && npm run build:css && npm run build:js",
     "build:css:test": "bash -c 'source .env && echo GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/test.css -o ./dist/css/test.${DATE_HASH}.css'",
     "build:html:test": "npm run replace:html && copyfiles -u 2 \"src/templates/*.html\" dist/test",
-    "build:test": "npm run prebuild && npm run build:html && npm run build:css:test",
+    "build:test": "npm run prebuild && npm run build:html:test && npm run build:css:test",
     "build:all": "npm run prebuild && npm run build:html && npm run build:html:test && npm run build:css:test && npm run build:css && npm run build:js",
     "watch": "npm run build && concurrently \"npm run watch:all\" ",
     "start:server": "npx http-server ./dist -o -p 3000",
