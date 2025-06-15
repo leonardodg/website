@@ -38,9 +38,9 @@
     "build:site": "run-s prebuild:site build:site:*",
     "build": "run-s prebuild build:site:* build:tests:*",
     
-    "prebuild": "run-s clean prepare copy:env lint:fix format",
-    "prebuild:site": "run-s clean:site prepare copy:env lint:fix format",
-    "prebuild:tests": "run-s clean:tests prepare copy:env lint:fix format",
+    "prebuild": "run-s clean copy:env prepare lint:fix format",
+    "prebuild:site": "run-s clean:site copy:env prepare lint:fix format",
+    "prebuild:tests": "run-s clean:tests copy:env prepare lint:fix format",
     "postinstall": "run-s build",
     "check": "npm run format:check && npm run lint",
     "clean": "del-cli --force \"dist\"",
