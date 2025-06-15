@@ -40,7 +40,7 @@
     "prebuild": "run-s clean prepare lint:fix format",
     "prebuild:site": "run-s clean:site prepare lint:fix format",
     "prebuild:tests": "run-s clean:tests prepare lint:fix format",
-    "postinstall": "run-s build watch",
+    "postinstall": "run-s build",
     "check": "npm run format:check && npm run lint",
     "clean": "del-cli --force \"dist\"",
     "clean:tests": "del-cli --force \"dist/tests\" \"dist/css/tests.*.css\"",
