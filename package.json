@@ -18,6 +18,7 @@
     "watch:js": "esbuild --watch src/scripts/main.js --bundle --outfile=dist/js/main.js --minify",
     "watch:all": "concurrently \"npm run watch:css\" \"npm run watch:html\" \"npm run watch:js\"",
     "replace:html": "bash -c 'source .env && echo GET DATE_HASH: $DATE_HASH && sed -i \"s/\\(css\\/.*\\)\\.[^.]*\\(\\.css\\)/\\1.$DATE_HASH\\2/g\" src/*.html src/templates/*.html'",
+    "replace:reset": "sed -i \"s/\\(css\\/.*\\)\\.[^.]*\\(\\.css\\)/\\1.[DATE_HASH]\\2/g\" src/*.html src/templates/*.html",
     "build:html": "npm run replace:html && copyfiles -u 1 \"src/*.html\" dist",
     "build:css": "bash -c 'source .env && echo GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/css/main.${DATE_HASH}.css'",
     "build:js": "esbuild src/scripts/main.js --bundle --outfile=dist/js/main.js --minify",
