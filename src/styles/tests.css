@@ -11,6 +11,18 @@ body {
   padding: min(50px, 5%);
 }
 
+:root {
+  --LightBlue: #add8e6;
+  --LightGreen: #90ee90;
+  --LightCoral: #f08080;
+  --LightGoldenRodYellow: #fafad2;
+  --LightPink: #ffb6c1;
+  --LightSalmon: #ffa07a;
+  --LightSkyBlue: #87cefa;
+  --LightSeaGreen: #20b2aa;
+  --LightSteelBlue: #b0c4de;
+}
+
 @layer grid {
   /* ------------------------------------------
    Grid Layout Styles
@@ -61,29 +73,29 @@ body {
     }
 
     .item:nth-child(3) {
-      background-color: LightCoral;
+      background-color: var(--LightCoral);
     }
 
     .item:nth-child(4) {
-      background-color: LightGoldenRodYellow;
+      background-color: var(--LightGoldenRodYellow);
     }
 
     .item:nth-child(5) {
-      background-color: LightPink;
+      background-color: var(--LightPink);
     }
 
     .item:nth-child(6) {
-      background-color: LightSalmon;
+      background-color: var(--LightSalmon);
     }
 
     .item:nth-child(7) {
-      background-color: LightSkyBlue;
+      background-color: var(--LightSkyBlue);
     }
     .item:nth-child(8) {
-      background-color: LightSeaGreen;
+      background-color: var(--LightSeaGreen);
     }
     .item:nth-child(9) {
-      background-color: LightSteelBlue;
+      background-color: var(--LightSteelBlue);
     }
   }
 
@@ -102,37 +114,37 @@ body {
     }
 
     .item:nth-child(1) {
-      background-color: LightBlue;
+      background-color: var(--LightBlue);
     }
 
     .item:nth-child(2) {
-      background-color: LightGreen;
+      background-color: var(--LightGreen);
     }
 
     .item:nth-child(3) {
-      background-color: LightCoral;
+      background-color: var(--LightCoral);
     }
 
     .item:nth-child(4) {
-      background-color: LightGoldenRodYellow;
+      background-color: var(--LightGoldenRodYellow);
     }
 
     .item:nth-child(5) {
-      background-color: LightPink;
+      background-color: var(--LightPink);
     }
 
     .item:nth-child(6) {
-      background-color: LightSalmon;
+      background-color: var(--LightSalmon);
     }
 
     .item:nth-child(7) {
-      background-color: LightSkyBlue;
+      background-color: var(--LightSkyBlue);
     }
     .item:nth-child(8) {
-      background-color: LightSeaGreen;
+      background-color: var(--LightSeaGreen);
     }
     .item:nth-child(9) {
-      background-color: LightSteelBlue;
+      background-color: var(--LightSteelBlue);
     }
   }
 
@@ -190,47 +202,78 @@ body {
 
   .flex-container {
     display: flex;
-    gap: 16px;
+    min-height: 600px;
+    background-color: #7e7d7d;
 
-    height: 400px;
-    width: 100%;
+    /* 
+      - justify-content to main axis
+      - align-content to cross axis
+      if gap is set, it will be applied to the around LEFT and RIGHT of the first and last item
+    
+      */
 
-    background-color: #bbb;
+    justify-content: center;
+    /* cross axis */
+    align-items: center;
+    gap: 40px;
 
-    justify-content: space-around;
-  }
+    /* flex-direction: row-reverse; */
 
-  .item-flex {
-    padding: 16px;
+    flex-wrap: wrap;
 
-    hight: 100px;
-    width: 100px;
+    .item {
+      /*
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    border: 2px solid red;
-    border-radius: 4px;
-  }
+      its to center the content inside the item
+      */
 
-  .item-flex:nth-child(1) {
-    background-color: LightBlue;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  .item-flex:nth-child(2) {
-    background-color: LightGreen;
-  }
+      height: 150px;
+      width: 150px;
 
-  .item-flex:nth-child(3) {
-    background-color: LightCoral;
-  }
+      border: 2px solid red;
+      border-radius: 4px;
+      font-size: 24pt;
+    }
 
-  .item-flex:nth-child(4) {
-    background-color: LightGoldenRodYellow;
-  }
+    .item:nth-child(1) {
+      background-color: var(--LightBlue);
 
-  .item-flex:nth-child(5) {
-    background-color: LightPink;
-  }
+      /* force grow box */
+      flex-grow: 1;
+      margin-right: auto;
+    }
 
-  .item-flex:nth-child(6) {
-    background-color: LightSalmon;
+    .item:nth-child(2) {
+      background-color: var(--LightGreen);
+    }
+
+    .item:nth-child(3) {
+      background-color: var(--LightCoral);
+    }
+
+    .item:nth-child(4) {
+      background-color: var(--LightGoldenRodYellow);
+    }
+
+    .item:nth-child(5) {
+      background-color: var(--LightPink);
+    }
+
+    .item:nth-child(6) {
+      background-color: var(--LightSalmon);
+
+      /* stop shrink box */
+      flex-shrink: 0;
+
+      /* force cross axis to end specific */
+      align-self: flex-end;
+    }
   }
 }
