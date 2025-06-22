@@ -292,16 +292,6 @@ body {
    theme. The styles ensure that the content is
    accessible and user-friendly in dark mode.
   // ------------------------------------------ */
-  /* 
-  
-  @media (prefers-color-scheme: dark) {
-    .dark-mode-test {
-      background-color: var(--bg-color-dark-test);
-      color: var(--text-color-dark-test);
-    }
-  }
-  
-  */
 
   body.dm-test {
     --bg-color-test: white;
@@ -337,6 +327,13 @@ body {
     &.dark-mode-test {
       background-color: var(--bg-color-dark-test);
       color: var(--text-color-dark-test);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      &.dark-mode-test {
+        background-color: var(--bg-color-dark-test);
+        color: var(--text-color-dark-test);
+      }
     }
   }
 }

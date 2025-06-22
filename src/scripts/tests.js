@@ -6,6 +6,8 @@ let darkMode = darkModeMediaQuery.matches;
 const lightIcon = document.getElementById('light-icon');
 const darkIcon = document.getElementById('dark-icon');
 
+console.log('Default darkMode state:', darkMode);
+
 // Set dark-mode class on body if darkMode is true and pick icon
 if (darkMode) {
   document.body.classList.add('dark-mode-test');
@@ -19,7 +21,11 @@ const btnDarkMode = document.getElementById('dark-mode-toggle');
 // Toggle dark mode on button click
 function toggleDarkMode() {
   // Toggle darkMode variable
+
+  console.log('Toggling dark mode');
+  console.log('Current darkMode state:', darkMode);
   darkMode = !darkMode;
+  console.log('Current darkMode state:', darkMode);
 
   // Toggle dark-mode class on body
   document.body.classList.toggle('dark-mode-test', darkMode);
@@ -36,3 +42,5 @@ function toggleDarkMode() {
 
 // Add event listener for dark mode toggle button
 btnDarkMode.addEventListener('click', toggleDarkMode);
+
+toggleDarkMode();
