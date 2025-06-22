@@ -4,20 +4,51 @@ const btnDarkMode = document.querySelector('#theme-toggle');
 const btnMenu = document.querySelector('#menu-toggle');
 const menu = document.querySelector('#menu');
 
-// TODO: Mode Dark/Light
-btnDarkMode.onclick = () => document.documentElement.classList.toggle('dark');
+const lightIcon = document.getElementById('light-icon');
+const darkIcon = document.getElementById('dark-icon');
 
-// TODO: Menu Toggle
+// TODO: GET - DARK MODE
+// Check if dark mode is preferred
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+let darkMode = darkModeMediaQuery.matches;
+
+console.log('Default darkMode state:', darkMode);
+
+// Set dark-mode class on body if darkMode is true and pick icon
+if (darkMode) {
+  darkIcon.setAttribute('display', 'none');
+} else {
+  lightIcon.setAttribute('display', 'none');
+}
+
+// TODO: CLICK - Mode Dark/Light
+btnDarkMode.onclick = () => {
+  document.documentElement.classList.toggle('dark');
+
+  // Toggle darkMode variable
+  darkMode = !darkMode;
+
+  // Toggle light and dark icons
+  if (darkMode) {
+    lightIcon.classList.toggle('hidden');
+    darkIcon.classList.toggle('hidden');
+  } else {
+    lightIcon.classList.toggle('hidden');
+    darkIcon.classList.toggle('hidden');
+  }
+};
+
+// TODO: CLICK - Menu Toggle
 btnMenu.onclick = () => menu.classList.toggle('hidden');
 
-// TODO: Add a click event listener to the menu outside the menu
+// TODO: ADD EVENT CLICK - Listener to the menu outside the menu
 document.onclick = (e) => {
   if (!menu.contains(e.target) && !btnMenu.contains(e.target)) {
     menu.classList.add('hidden');
   }
 };
 
-// TODO: Back to the top of the page
+// TODO: CLICK - Back to the top of the page
 const backToTop = document.querySelector('#back-to-top');
 
 window.onscroll = () => {
@@ -32,7 +63,7 @@ backToTop.onclick = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-// TODO: Dynamic Year in Footer
+// TODO: SET - Dynamic Year in Footer
 const dataYear = new Date().getFullYear();
 const elementYear = document.querySelector('#current-year');
 elementYear.textContent = dataYear;

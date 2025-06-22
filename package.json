@@ -15,20 +15,22 @@
     "format:check": "prettier --check \"src/**/*.{js,css,html}\"",
 
     "watch:html": "onchange -k \"src/index.html\" \"src/templates/*.html\" -- run-s build",
+    "watch:img": "onchange -k \"src/images/*\" -- run-s copy:img",
     "watch:js": "onchange -k \"src/scripts/*.js\" -- run-s build",
     "watch:css": "onchange -k \"src/styles/main.css\" \"src/styles/tests.css\" -- run-s build",
     "watch": "run-p watch:*",
 
     "replace:html": "bash -c 'source .env && echo REPLACE GET DATE_HASH: $DATE_HASH && sed -i \"s/\\(css\\/.*\\|js\\/.*\\)\\.[^.]*\\(\\.css\\|\\.js\\)/\\1.$DATE_HASH\\2/g\" dist/*.html dist/tests/*.html'",
     "copy:html": "copyfiles -u 1 \"src/*.html\" dist && copyfiles -u 2 \"src/templates/*.html\" dist/tests",
+    "copy:img": "copyfiles -u 2 \"src/images/*\" dist/img",
     "copy:env": "if [ ! -f /.env ]; then cp .env-copy .env; fi",
 
     "build-css:main": "bash -c 'source .env && echo BUILD-CSS GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/css/main.${DATE_HASH}.css'",
     "build-css:tests": "bash -c 'source .env && echo BUILD-CSS-TESTS GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/tests.css -o ./dist/css/tests.${DATE_HASH}.css'",
     "build:css": "run-p build-css:*",
     "build:js": "bash -c 'source .env && esbuild main.${DATE_HASH}=src/scripts/main.js tests.${DATE_HASH}=src/scripts/tests.js  --bundle --sourcemap --target=chrome58,firefox57,safari11,edge16 --outdir=dist/js/'",
-    "build:html": "run-s copy:html replace:html",
-    "build": "run-s prebuild build:html && run-p build:js build:css",
+    "build:files": "run-s copy:img copy:html replace:html",
+    "build": "run-s prebuild build:files && run-p build:js build:css",
     
     "prebuild": "run-s clean copy:env prepare lint:fix format",
 
