@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="../css/tests.[DATE_HASH].css" />
+  </head>
+
+  <body class="dm-test dm-height dark-mode-test">
+    <div class="texto">
+      <h1>Dark Mode HardCode</h1>
+      <br />
+      <p>
+        This is a test for dark mode using Tailwind CSS and CSS variables. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        doloremque soluta dignissimos tempora dolore adipisci assumenda amet
+        earum laborum, expedita pariatur, repellat natus. Vel, repudiandae a
+        fugiat aspernatur itaque rem! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Esse similique officia aspernatur reiciendis, ducimus
+        iure repellendus aut aliquid, neque quibusdam nostrum. Veniam reiciendis
+        tenetur dicta, necessitatibus et laudantium molestias consectetur?
+      </p>
+      <br />
+      <button id="dark-mode-toggle">
+        <svg width="30" height="30" id="light-icon">
+          <circle cx="15" cy="15" r="6" fill="currentColor" />
+
+          <line
+            id="ray"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            x1="15"
+            y1="1"
+            x2="15"
+            y2="4"
+          ></line>
+
+          <use href="#ray" transform="rotate(45 15 15)" />
+          <use href="#ray" transform="rotate(90 15 15)" />
+          <use href="#ray" transform="rotate(135 15 15)" />
+          <use href="#ray" transform="rotate(180 15 15)" />
+          <use href="#ray" transform="rotate(225 15 15)" />
+          <use href="#ray" transform="rotate(270 15 15)" />
+          <use href="#ray" transform="rotate(315 15 15)" />
+        </svg>
+        <svg width="30" height="30" id="dark-icon">
+          <path
+            fill="currentColor"
+            d="
+            M 23, 5
+            A 12 12 0 1 0 23, 25
+            A 12 12 0 0 1 23, 5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+
+  <script src="../js/tests.[DATE_HASH].js"></script>
+</html>
