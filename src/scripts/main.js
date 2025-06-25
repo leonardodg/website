@@ -7,6 +7,9 @@ const menu = document.querySelector('#menu');
 const lightIcon = document.getElementById('light-icon');
 const darkIcon = document.getElementById('dark-icon');
 
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
+
 // TODO: GET - DARK MODE
 // Check if dark mode is preferred
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -39,7 +42,18 @@ btnDarkMode.onclick = () => {
 };
 
 // TODO: CLICK - Menu Toggle
-btnMenu.onclick = () => menu.classList.toggle('hidden');
+function clickMenuToggle(e) {
+  menu.classList.toggle('hidden');
+
+  if (menuIcon.contains(e.target)) {
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  } else if (closeIcon.contains(e.target)) {
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  }
+}
+btnMenu.onclick = (e) => clickMenuToggle(e);
 
 // TODO: ADD EVENT CLICK - Listener to the menu outside the menu
 document.onclick = (e) => {
