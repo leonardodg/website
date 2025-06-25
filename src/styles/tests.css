@@ -212,7 +212,7 @@ body {
     
       */
 
-    justify-content: center;
+    justify-content: flex-end;
     /* cross axis */
     align-items: center;
     gap: 40px;
@@ -246,8 +246,9 @@ body {
       background-color: var(--LightBlue);
 
       /* force grow box */
-      flex-grow: 1;
-      margin-right: auto;
+      /* flex-grow: 1;
+      margin-right: auto; */
+      justify-self: flex-start;
     }
 
     .item:nth-child(2) {
@@ -270,10 +271,23 @@ body {
       background-color: var(--LightSalmon);
 
       /* stop shrink box */
-      flex-shrink: 0;
+      /* flex-shrink: 0; */
 
       /* force cross axis to end specific */
-      align-self: flex-end;
+      /* align-self: flex-end; */
+    }
+  }
+
+  .flex-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #7e7d7d;
+    align-items: flex-end;
+
+    .item {
+      border: 2px solid red;
+      border-radius: 4px;
+      font-size: 24pt;
     }
   }
 }
