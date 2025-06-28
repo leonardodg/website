@@ -9,6 +9,12 @@
 	"remoteUser": "node",
 
 	"forwardPorts": [3000],
+	"appPort": ["3000:3000"],
+	"portsAttributes": {
+        "3000": {
+				"visibility": "public"
+			}
+		},
 	"postCreateCommand": "npm install",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

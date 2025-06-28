@@ -8,13 +8,29 @@
   </head>
 
   <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <img
+      src="/img/bg-hero-xlarge.png"
+      srcset="
+        /img/bg-hero-small.jpg   480w,
+        /img/bg-hero-medium.jpg  800w,
+        /img/bg-hero-large.jpg  1200w,
+        /img/bg-hero-xlarge.png 1600w
+      "
+      sizes="100vw"
+      alt="Astronaut programming with a view of space and a spaceship"
+      class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+      loading="lazy"
+      decoding="async"
+    />
+
     <header
-      class="fixed flex w-full items-center bg-white p-3 shadow-md dark:bg-gray-800"
+      class="sticky top-0 z-[9999] flex w-full items-center bg-white/20 p-3 shadow-md dark:bg-gray-800/20"
     >
-      <div class="ml-12 sm:ml-24">
+      <div class="ml-10 flex h-16 items-end sm:ml-20">
+        <!-- TODO: BAND LOGO -->
         <a href="/" class="text-blue-400 hover:text-blue-600" title="LeoDG">
           <svg
-            class="mx-4 my-1 inline h-10 w-40 fill-current text-black dark:text-white"
+            class="mx-4 my-2 h-10 w-40 fill-current text-black dark:text-white"
             viewBox="0 0 512 128"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="LeoDG"
@@ -29,7 +45,7 @@
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 300.0000305175781 115.11161041259766"
               overflow="visible"
-              class="mx-4 my-1 inline h-10 w-40 fill-current text-black dark:text-white"
+              class="mx-4 my-1 h-10 w-40 fill-current text-black dark:text-white"
               viewBox="0 0 128 32"
               aria-label="LeoDG"
             >
@@ -81,7 +97,7 @@
       <div class="flex w-full justify-end">
         <nav
           id="menu"
-          class="absolute top-full right-0 hidden w-full bg-white px-2 text-center align-middle md:static md:flex md:flex-row md:items-center md:justify-end md:space-x-6 dark:bg-gray-800"
+          class="absolute top-full right-0 hidden w-full bg-transparent px-2 text-center align-middle font-bold md:static md:flex md:flex-row md:items-center md:justify-end md:space-x-6"
         >
           <a
             href="#"
@@ -166,27 +182,88 @@
       </div>
     </header>
 
-    <!-- TODO: Main Section -->
-    <main>
-      <!-- TODO: Hero Section -->
-
-      <section
-        class="flex h-screen flex-col items-center justify-center text-center"
+    <!-- TODO: Hero Section Welcome -->
+    <section
+      class="flex min-h-148 w-full items-center justify-center text-center"
+    >
+      <div
+        class="m-4 w-full max-w-sm rounded-2xl bg-white/10 p-6 text-white shadow-xl"
       >
-        <h2 class="mb-4 text-4xl font-bold">Welcome to My Portfolio</h2>
-        <p class="mb-8 text-lg">
+        <h2 class="mb-4 text-4xl font-bold text-shadow-lg/30">
+          Welcome to My Portfolio
+        </h2>
+        <p class="mb-8 text-lg text-shadow-lg/30">
           I'm a passionate developer with experience in building web
           applications.
         </p>
         <a
           href="#projects"
-          class="rounded bg-blue-500 px-4 py-2 text-white shadow-md hover:bg-blue-600"
+          class="rounded bg-blue-500 px-4 py-2 shadow-md hover:bg-blue-600"
           >View My Work</a
         >
-      </section>
+      </div>
+    </section>
 
+    <!-- TODO: About-->
+    <section
+      id="about"
+      class="flex h-screen flex-col items-center justify-center bg-gray-200 text-center md:flex-row dark:bg-gray-800"
+    >
+      <div class="basis-2/5">
+        <div
+          class="my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm"
+        >
+          <div
+            class="m-2.5 flex h-80 items-center justify-end overflow-hidden rounded-md"
+          >
+            <img
+              class="mx-auto size-48 rounded-full border-4 border-blue-500"
+              src="img/avatar.png"
+              alt="profile-picture"
+            />
+          </div>
+          <div class="p-6 text-center">
+            <h4 class="mb-1 text-xl font-semibold text-slate-800">
+              Leonardo Della Giustina
+            </h4>
+            <p class="text-sm font-semibold text-slate-500 uppercase">
+              Fullstack Developer
+            </p>
+            <p class="mt-4 text-base font-light text-slate-600">
+              The place is close to Barceloneta Beach and bus stop just 2 min by
+              walk and near to Naviglio where you can enjoy the main night life
+              in Barcelona.
+            </p>
+          </div>
+          <div class="flex justify-center gap-7 p-6 pt-2">
+            <button
+              class="min-w-32 rounded-md border border-transparent bg-slate-800 px-4 py-2 text-center text-sm text-white shadow-md transition-all hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+            >
+              Follow
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="basis-2/5 px-4 md:px-20">
+        <div class="mb-6 flex flex-col items-center justify-center">
+          <h2 class="mb-4 text-4xl font-bold">About Me</h2>
+          <p class="mb-8 text-lg">
+            I am a developer with a passion for creating innovative solutions.
+            My journey in web development started with a simple HTML page and
+            has evolved into building complex applications. I enjoy working with
+            modern technologies and frameworks, and I am always eager to learn
+            new skills. My goal is to create user-friendly applications that
+            solve real-world problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODO: Main Section -->
+    <main>
       <!-- TODO: Projects -->
-
       <section
         id="projects"
         class="flex h-screen flex-col items-center justify-center text-center"
@@ -222,8 +299,6 @@
           </div>
         </div>
       </section>
-
-      <!-- TODO: About-->
     </main>
 
     <!-- TODO: Button to Top -->
