@@ -81,3 +81,55 @@ backToTop.onclick = () => {
 const dataYear = new Date().getFullYear();
 const elementYear = document.querySelector('#current-year');
 elementYear.textContent = dataYear;
+
+// TODO: typeWriter
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  // Array with texts to type in typewriter
+  var dataText = [
+    'Fullstack Developer.',
+    'Web Developer.',
+    'Product Manager.',
+    'DevOps Engineer.',
+  ];
+  const typedOut = document.getElementById('typed-out');
+
+  // Type one text in the typwriter
+  // Keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // Chekc if text isn't finished yet
+    if (i < text.length) {
+      // Add next character to h1
+      typedOut.innerHTML =
+        text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+      // Wait for a while and call this function again for next character
+      setTimeout(function () {
+        typeWriter(text, i + 1, fnCallback);
+      }, 100);
+    }
+    // Text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // Call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // Start a typewriter animation for a text in the dataText array
+  function StartTextAnimation(i) {
+    if (typeof dataText[i] == 'undefined') {
+      setTimeout(function () {
+        StartTextAnimation(0);
+      }, 10000);
+    }
+    // Check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // Text exists! start typewriter animation
+      typeWriter(dataText[i], 0, function () {
+        // After callback (and whole text has been animated), start next text
+        StartTextAnimation(i + 1);
+      });
+    }
+  }
+  // Start the text animation
+  StartTextAnimation(0);
+});

@@ -1,0 +1,13 @@
+#typed-out::after {
+  content: '|';
+  animation: typing 1s steps(1) infinite;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

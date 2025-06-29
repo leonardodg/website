@@ -7,3 +7,5 @@
 @import './custom-btn.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@import './typewriter.css';
