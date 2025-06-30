@@ -5,7 +5,12 @@
 
 @import './variables.css';
 @import './custom-btn.css';
+@import './custom.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import './typewriter.css';
+
+@import 'devicon/devicon.min.css';
+
+@import './overwrite-fonts.css';

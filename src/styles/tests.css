@@ -351,3 +351,17 @@ body {
     }
   }
 }
+
+@import 'devicon/devicon.min.css';
+
+@font-face {
+  font-family: 'devicon';
+  src:
+    url('./../fonts/devicon.ttf?iehcku') format('truetype'),
+    url('./../fonts/devicon.woff?iehcku') format('woff'),
+    url('./../fonts/devicon.svg?iehcku#devicon') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

@@ -1,0 +1,9 @@
+.preline:before {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 2px;
+  left: 4px;
+  top: 72%;
+  position: absolute;
+}
