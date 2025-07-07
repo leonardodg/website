@@ -1,6 +1,6 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "Frontend Dev Container to website LeoDG",
+	"name": "Frontend Dev Container to Portfolio LeoDG",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
@@ -8,14 +8,10 @@
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "node",
 
-	"forwardPorts": [3000],
-	"appPort": ["3000:3000"],
-	"portsAttributes": {
-        "3000": {
-				"visibility": "public"
-			}
-		},
-	"postCreateCommand": "npm install",
+	"postCreateCommand": {
+		"Fix Volume Permissions": "sudo chown -R $(whoami): /commandhistory",
+		"npm install": "npm install"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -43,26 +39,11 @@
 					"type": "bind"
 				},
 				{
-					"source": "${localEnv:HOME}/.bashrc",
-					"target": "/home/node/.bashrc",
-					"type": "bind"
-				},
-				{
-					"source": "${localEnv:HOME}/.bash_history",
-					"target": "/home/node/.bash_history",
-					"type": "bind"
-				},
-				{
-					"source": "${localEnv:HOME}/.zsh_history",
-					"target": "/home/node/.zsh_history",
-					"type": "bind"
+					"source": "bashhistory",
+					"target": "/commandhistory",
+					"type": "volume"
 				}
 			],
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
 
 	// Configure tool-specific properties.
 	"customizations": {

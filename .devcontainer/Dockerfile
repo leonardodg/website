@@ -22,6 +22,3 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
 # Configurar npm global para o usuário node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
-
-# Expor a porta 3000 para o localhost
-EXPOSE 3000

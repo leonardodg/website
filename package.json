@@ -1,9 +1,10 @@
 {
-  "name": "website",
+  "name": "portfolio-website-leodg",
   "version": "1.0.0",
-  "description": "website Leodg",
+  "description": "My portfolio & website by Leodg",
   "main": "index.js",
   "scripts": {
+    "load:env": " set NODE_OPTIONS='--env-file=.devcontainer/.env' ",
     "date:load": "export DATE_HASH=$(date +%Y%m%d%H%M%S) && process.env['DATE_HASH'] = ${DATE_HASH}; sudo bash -c 'echo \"DATE_HASH=${DATE_HASH}\" >> /etc/environment' && echo \"DATE_HASH SET: ${DATE_HASH}\" && sed -i -e \"s/DATE_HASH=.*/DATE_HASH=$DATE_HASH/\" .env",
     "prepare": "npm run date:load && bash -c 'source .env && echo PREPARE DATE_HASH: $DATE_HASH'",
     "dev": "process.env['NODE_ENV'] = 'development'; run-s build watch",
@@ -29,17 +30,19 @@
     "build:files": "run-s copy:fonts copy:img copy:html replace:html",
     "build": "run-s prebuild build:files && run-p build:js build:css",
     "prebuild": "run-s clean copy:env prepare lint:fix format",
-    "postinstall": "run-s build",
+    "postinstall": "run-s build serve",
     "check": "npm run format:check && npm run lint",
     "clean": "del-cli --force \"dist\"",
     "reset": "npm run clean && npm run replace:reset",
     "tests": "echo '>> write tests';/bin/true",
-    "serve": "npx http-server ./dist -o -p 3000"
+    "serve": "bash -c 'source .devcontainer/.env && echo SERVER Run in Localhost PORT:${PORT} && npx http-server ./dist -p ${PORT}'"
   },
   "keywords": [
     "website",
-    "leonardodg",
     "portfolio",
+    "leonardodg",
+    "leodg",
+    "devcontainer",
     "tailwindcss",
     "frontend",
     "gh-pages",
