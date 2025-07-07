@@ -30,12 +30,12 @@
     "build:files": "run-s copy:fonts copy:img copy:html replace:html",
     "build": "run-s prebuild build:files && run-p build:js build:css",
     "prebuild": "run-s clean copy:env prepare lint:fix format",
-    "postinstall": "run-s build serve",
+    "postinstall": "npm run build",
     "check": "npm run format:check && npm run lint",
     "clean": "del-cli --force \"dist\"",
     "reset": "npm run clean && npm run replace:reset",
     "tests": "echo '>> write tests';/bin/true",
-    "serve": "bash -c 'source .devcontainer/.env && echo SERVER Run in Localhost PORT:${PORT} && npx http-server ./dist -p ${PORT}'"
+    "serve": "bash -c 'source .devcontainer/.env && echo SERVER Run in Localhost PORT:${PORT} && npx http-server ./dist -o -p ${PORT}'"
   },
   "keywords": [
     "website",
