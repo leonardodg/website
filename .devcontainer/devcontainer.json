@@ -2,11 +2,22 @@
 {
 	"name": "Frontend Dev Container to Portfolio LeoDG",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+		"args": {
+            "PORT": "${localEnv:PORT}"
+        }
 	},
 	
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "node",
+
+	"forwardPorts": [3000],
+	"appPort": ["3000:3000"],
+	"portsAttributes": {
+        "3000": {
+				"visibility": "public"
+			}
+		},
 
 	"postCreateCommand": {
 		"Fix Volume Permissions": "sudo chown -R $(whoami): /commandhistory",

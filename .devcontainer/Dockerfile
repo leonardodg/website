@@ -1,5 +1,7 @@
 FROM node:18
 
+ARG PORT
+
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo git curl \
     && apt clean \
@@ -22,3 +24,5 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
 # Configurar npm global para o usuário node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
+
+EXPOSE $PORT
