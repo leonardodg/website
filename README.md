@@ -2,7 +2,9 @@
 ## Frontend with Tailwind CSS and DevContainer Environment
 A frontend from simple project my Website and my portfolio using Tailwind CSS in a DevContainer environment.
 
-![Website](https://placehold.co/600x300?text=LeoDG)
+<img width="800" height="600" alt="homepage" src="https://github.com/leonardodg/website/blob/main/images/leodg.dev.png?raw=true">
+
+
 ## 📋 Features
 - ⚡ **Rapid development** Frontend with Tailwind CSS
 - 🔄 **Auto-reload** for CSS changes
@@ -71,14 +73,18 @@ A frontend from simple project my Website and my portfolio using Tailwind CSS in
  
  ## 🤝 Contributing
  
+ <img src="https://avatars.githubusercontent.com/u/1678290?s=400&u=2f875356b82f055057b6e9679c0b66001b9b29f9&v=4" title="LeoDG" >
 
- <img src="http://raw.githubusercontent.com/leonardodg/website/main/src/images/leodg.png?sanitize=true&raw=true" title="LeoDG" >
 
  ## 📄 License
  This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
  
  ## 📮 Contact
  
- Leodg - [@le0dg](https://www.linkedin.com/in/le0dg) - leonardo@msn.com
+LeonardoDG - [@le0dg](https://www.linkedin.com/in/le0dg)
 
- Project Link: [https://github.com/leonardodg/website.git](https://github.com/leonardodg/website.git)
+Github Repository Link: [https://github.com/leonardodg/website.git](https://github.com/leonardodg/website.git)
+
+GH-Pages Link: [https://leonardodg.github.io/website](https://leonardodg.github.io/website)
+
+Website Link: [https://leodg.dev](https://leodg.dev)
