@@ -2,7 +2,7 @@
 ## Frontend with Tailwind CSS and DevContainer Environment
 A frontend from simple project my Website and my portfolio using Tailwind CSS in a DevContainer environment.
 
-<img width="800" height="600" alt="homepage" src="https://github.com/leonardodg/website/blob/main/images/leodg.dev.png?raw=true">
+<img width="800" height="600" alt="homepage" src="https://github.com/leonardodg/website/blob/main/src/images/leodg.dev.png?raw=true">
 
 
 ## 📋 Features
