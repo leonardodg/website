@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     'Web Developer.',
     'Product Manager.',
     'DevOps Engineer.',
+    'Specialized Moodle.',
   ];
   const typedOut = document.getElementById('typed-out');
 

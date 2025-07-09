@@ -12,11 +12,13 @@ A frontend from simple project my Website and my portfolio using Tailwind CSS in
 - 📱 **Responsive design** ready for use
 - 🔌 **Port forwarding** configured for easy localhost access
 
-## 🚀 Quick Start### Prerequisites
-- [Git] (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+## 🚀 Quick Start
+
+### Prerequisites
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VS Code extension
+- [Remote - Containers - VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 ### Installation and Running
 
