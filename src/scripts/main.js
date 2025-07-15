@@ -134,3 +134,47 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // Start the text animation
   StartTextAnimation(0);
 });
+
+// Initialize only the accordion we want to work
+const accordion = document.getElementsByClassName('accordion-collapse');
+if (accordion) {
+  Array.from(accordion).forEach((el) => {
+    el.querySelectorAll('[data-accordion-target]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-accordion-target');
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.classList.toggle('hidden');
+          const icon = button.querySelector('[data-accordion-icon]');
+          if (icon) {
+            icon.classList.toggle('rotate-180');
+          }
+        }
+      });
+    });
+  });
+}
+
+// Improved fade-in animation
+document.addEventListener('DOMContentLoaded', function () {
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const fadeInObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          fadeInObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    },
+  );
+
+  fadeElements.forEach((element) => {
+    fadeInObserver.observe(element);
+  });
+});

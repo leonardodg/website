@@ -18,16 +18,17 @@
     "watch:js": "onchange -k \"src/scripts/*.js\" -- run-s build",
     "watch:css": "onchange -k \"src/styles/main.css\" \"src/styles/tests.css\" -- run-s build",
     "watch": "run-p watch:*",
-    "replace:html": "bash -c 'source .env && echo REPLACE GET DATE_HASH: $DATE_HASH && sed -i \"s/\\(css\\/.*\\|js\\/.*\\)\\.[^.]*\\(\\.css\\|\\.js\\)/\\1.$DATE_HASH\\2/g\" dist/*.html dist/tests/*.html'",
+    "replace:html": "bash -c 'source .env && echo REPLACE GET DATE_HASH: $DATE_HASH && sed -i \"s/\\(css\\/.*\\|js\\/.*\\)\\[DATE_HASH\\]\\(\\.css\\|\\.js\\)/\\1$DATE_HASH\\2/g\" dist/*.html dist/tests/*.html'",
     "copy:html": "copyfiles -u 1 \"src/*.html\" dist && copyfiles -u 2 \"src/templates/*.html\" dist/tests",
     "copy:img": "copyfiles -u 2 \"src/images/*\" dist/img",
-    "copy:fonts": "copyfiles -u 2 \"node_modules/devicon/fonts/*\" dist && copyfiles -u 3 \"node_modules/material-icons/iconfont/*\" dist/material-icons/",
+    "copy:css": "copyfiles -u 4 \"node_modules/@fortawesome/fontawesome-free/css/*\" dist/css",
+    "copy:fonts": "copyfiles -u 2 \"node_modules/devicon/fonts/*\" dist && copyfiles -u 3 \"node_modules/material-icons/iconfont/*\" dist/material-icons/ && copyfiles -u 4 \"node_modules/@fortawesome/fontawesome-free/webfonts/*\" dist/webfonts",
     "copy:env": "if [ ! -f /.env ]; then cp .env-copy .env; fi",
     "build-css:main": "bash -c 'source .env && echo BUILD-CSS GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/main.css -o ./dist/css/main.${DATE_HASH}.css'",
     "build-css:tests": "bash -c 'source .env && echo BUILD-CSS-TESTS GET DATE_HASH: $DATE_HASH && npx @tailwindcss/cli -i ./src/styles/tests.css -o ./dist/css/tests.${DATE_HASH}.css'",
     "build:css": "run-p build-css:*",
     "build:js": "bash -c 'source .env && esbuild main.${DATE_HASH}=src/scripts/main.js tests.${DATE_HASH}=src/scripts/tests.js  --bundle --sourcemap --target=chrome58,firefox57,safari11,edge16 --outdir=dist/js/'",
-    "build:files": "run-s copy:fonts copy:img copy:html replace:html",
+    "build:files": "run-s copy:fonts copy:css copy:img copy:html replace:html",
     "build": "run-s prebuild build:files && run-p build:js build:css",
     "prebuild": "run-s clean copy:env prepare lint:fix format",
     "postinstall": "npm run build",
@@ -78,6 +79,7 @@
     "tailwindcss": "^4.1.6"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "devicon": "^2.16.0",
     "material-icons": "^1.13.14"
   }

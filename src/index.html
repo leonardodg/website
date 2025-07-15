@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link href="./material-icons/material-icons.css" rel="stylesheet" />
     <link href="./material-icons/outlined.css" rel="stylesheet" />
+    <!-- load all Font Awesome v6 styles -->
+    <link href="./css/all.min.css" rel="stylesheet" />
   </head>
 
   <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
@@ -410,139 +412,868 @@
         id="timeline"
         class="text-let flex flex-col items-center justify-center"
       >
-        <h2 class="mb-4 text-4xl font-bold">Timeline</h2>
+        <h2 class="mb-4 text-4xl font-bold">My Professional Journey</h2>
         <p class="mx-8 mb-8 text-lg">
-          Here are history of the projects I've worked on:
+          A timeline of my projects, experiences, and growth as a developer and
+          IT specialist
         </p>
         <div class="mb-4 w-2/3 sm:w-sm">
           <ol class="relative border-s border-gray-200 dark:border-gray-700">
+            <!-- Portfolio Project -->
             <li class="ms-6 mb-10">
-              <span
-                class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900"
-              >
-                <svg
-                  class="h-2.5 w-2.5 text-blue-800 dark:text-blue-300"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 16 12"
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 ring-4 ring-white dark:bg-blue-900 dark:ring-gray-900"
                 >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5.917 5.724 10.5 15 1.5"
-                  />
-                </svg>
-              </span>
-              <h3
-                class="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white"
-              >
-                Project 1
-              </h3>
-              <time
-                class="mb-2 block text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
-                >Released on January 13th, 2022</time
-              >
-              <p
-                class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
-              >
-                Get access to over 20+ pages including a dashboard layout,
-                charts, kanban board, calendar, and pre-order E-commerce &
-                Marketing pages.
-              </p>
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-gray-900 dark:bg-blue-900 dark:text-white"
+                >
+                  2025
+                </div>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="mb-2 overflow-hidden rounded-lg border-l-4 border-blue-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading1">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse1"
+                      aria-expanded="true"
+                      aria-controls="collapse1"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-gray-900 transition-all duration-300 dark:bg-blue-900 dark:text-white"
+                      >
+                        <i class="fas fa-laptop-code"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          My Portfolio
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          March - July 2025
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse1" class="block" aria-labelledby="heading1">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Building of frontend my Website and deploy in Github
+                        Pages
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                          >Tailwindcss</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                          >DevOps</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                          >AWS</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-3">
+                        <a
+                          href="https://github.com/leonardodg/website"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          <i class="fab fa-github mr-1"></i> Github
+                        </a>
+                        <a
+                          href="https://leonardodg.github.io/website/"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          <i class="fas fa-external-link-alt mr-1"></i> Gh-Pages
+                        </a>
+                        <a
+                          href="https://leodg.dev"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          <i class="fas fa-globe mr-1"></i> Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
+            <!-- Ivana Academy -->
             <li class="ms-6 mb-10">
-              <span
-                class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900"
-              >
-                <svg
-                  class="h-2.5 w-2.5 text-blue-800 dark:text-blue-300"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 ring-4 ring-white dark:bg-green-900 dark:text-green-300 dark:ring-gray-900"
                 >
-                  <path
-                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                  />
-                </svg>
-              </span>
-              <h3
-                class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-              >
-                Project
-              </h3>
-              <time
-                class="mb-2 block text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
-                >Released on December 7th, 2021</time
-              >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                All of the pages and components are first designed in Figma and
-                we keep a parity between the two versions even as we update the
-                project.
-              </p>
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-600 dark:bg-green-900 dark:text-green-300"
+                >
+                  2025
+                </div>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="mb-2 overflow-hidden rounded-lg border-l-4 border-green-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading2">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse2"
+                      aria-expanded="true"
+                      aria-controls="collapse2"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 transition-all duration-300 dark:bg-green-900 dark:text-green-300"
+                      >
+                        <i class="fas fa-graduation-cap"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          Ivana Academy
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          January - April 2025
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse2" class="block" aria-labelledby="heading2">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Deploying infrastructure AWS, install and setup of
+                        infrastructure in Linux and Docker, development and
+                        customization theme, install plugins and platform
+                        administration.
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                          >DevOps AWS</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-yellow-100 px-3 py-1 text-xs text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                          >Fullstack</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-red-100 px-3 py-1 text-xs text-red-800 dark:bg-red-900 dark:text-red-200"
+                          >Moodle specialist</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-3">
+                        <a
+                          href="https://ivana.academy/"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-green-600 hover:underline dark:text-green-400"
+                        >
+                          <i class="fas fa-globe mr-1"></i> Website
+                        </a>
+                        <a
+                          href="https://github.com/leonardodg/ivana-academy/"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-green-600 hover:underline dark:text-green-400"
+                        >
+                          <i class="fab fa-github mr-1"></i> Github
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
+            <!-- Firjan & SENAI & Eletrobras -->
             <li class="ms-6 mb-10">
-              <span
-                class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900"
-              >
-                <svg
-                  class="h-2.5 w-2.5 text-blue-800 dark:text-blue-300"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-purple-600 ring-4 ring-white dark:bg-purple-900 dark:text-purple-300 dark:ring-gray-900"
                 >
-                  <path
-                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                  />
-                </svg>
-              </span>
-              <h3
-                class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
-              >
-                Project 2
-              </h3>
-              <time
-                class="mb-2 block text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
-                >Released on December 2nd, 2021</time
-              >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Get started with dozens of web components and interactive
-                elements built on top of Tailwind CSS.
-              </p>
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-600 dark:bg-purple-900 dark:text-purple-300"
+                >
+                  2025
+                </div>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="mb-2 overflow-hidden rounded-lg border-l-4 border-purple-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading3">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse3"
+                      aria-expanded="true"
+                      aria-controls="collapse3"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 text-purple-600 transition-all duration-300 dark:bg-purple-900 dark:text-purple-300"
+                      >
+                        <i class="fas fa-university"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          Firjan & SENAI & Eletrobras
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          December 2024 - April 2025
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse3" class="block" aria-labelledby="heading3">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Specialist in Moodle, consulting and platform
+                        administration
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                          >Moodle Specialist</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                          >PHP</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200"
+                          >Administration</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-3">
+                        <a
+                          href="https://unise.eletrobras.com/"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-purple-600 hover:underline dark:text-purple-400"
+                        >
+                          <i class="fas fa-globe mr-1"></i> Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
+            <!-- AltoQi: Keycloak and Developer WEB -->
             <li class="ms-6 mb-10">
-              <span
-                class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900"
-              >
-                <svg
-                  class="h-2.5 w-2.5 text-blue-800 dark:text-blue-300"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-600 ring-4 ring-white dark:bg-red-900 dark:text-red-300 dark:ring-gray-900"
                 >
-                  <path
-                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                  />
-                </svg>
-              </span>
-              <h3
-                class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-600 dark:bg-red-900 dark:text-red-300"
+                >
+                  2024
+                </div>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="rounded-lg border-l-4 border-red-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading4">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse4"
+                      aria-expanded="true"
+                      aria-controls="collapse4"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-600 transition-all duration-300 dark:bg-red-900 dark:text-red-300"
+                      >
+                        <i class="fas fa-code"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          AltoQi: Developer WEB
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          June 2024
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse4" class="block" aria-labelledby="heading4">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Development Backend and Frontend website integration
+                        with Keycloak
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-red-100 px-3 py-1 text-xs text-red-800 dark:bg-red-900 dark:text-red-200"
+                          >Development Web</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-yellow-100 px-3 py-1 text-xs text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                          >Fullstack</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-indigo-100 px-3 py-1 text-xs text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                          >Keycloak</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-3">
+                        <a
+                          href="https://github.com/leonardodg/keycloak"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-400"
+                        >
+                          <i class="fab fa-github mr-1"></i> Github
+                        </a>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          <i class="fas fa-lock mr-1"></i> Repositories Private
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- AltoQi: Developer Python and Developer WEB -->
+            <li class="ms-6 mb-10">
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-600 ring-4 ring-white dark:bg-red-900 dark:text-red-300 dark:ring-gray-900"
+                >
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-600 dark:bg-red-900 dark:text-red-300"
+                >
+                  2024
+                </div>
+              </div>
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="rounded-lg border-l-4 border-red-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading5">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse5"
+                      aria-expanded="true"
+                      aria-controls="collapse5"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-600 transition-all duration-300 dark:bg-red-900 dark:text-red-300"
+                      >
+                        <i class="fab fa-python"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          AltoQi: Developer Python
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          August 2023 - August 202
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse5" class="block" aria-labelledby="heading5">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Development repository private company AltoQi with
+                        language Python and Framework FastAPI
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-red-100 px-3 py-1 text-xs text-red-800 dark:bg-red-900 dark:text-red-200"
+                          >Development Web</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-yellow-100 px-3 py-1 text-xs text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                          >Python</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                          >FastAPI</span
+                        >
+                      </div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-lock mr-1"></i> Repositories Private
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- QiSat: DevOps Migration CI/CD -->
+            <li class="ms-6 mb-10">
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100 text-yellow-600 ring-4 ring-white dark:bg-yellow-900 dark:text-yellow-300 dark:ring-gray-900"
+                >
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300"
+                >
+                  2022
+                </div>
+              </div>
+
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="rounded-lg border-l-4 border-green-500 bg-white shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                >
+                  <!-- button -->
+                  <h2 id="heading6">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapse6"
+                      aria-expanded="true"
+                      aria-controls="collapse6"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-red-600 transition-all duration-300 dark:bg-red-900 dark:text-red-300"
+                      >
+                        <i class="fab fa-python"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          QiSat: DevOps
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2022
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+
+                  <!-- context -->
+                  <div id="collapse6" class="block" aria-labelledby="heading6">
+                    <div class="bg-gray-50 p-6 pt-1 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Migration CI/CD and DevOps in the company QiSat to AWS
+                        and Github
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                          >Github</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-800 dark:bg-orange-900 dark:text-orange-200"
+                          >AWS</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                          >CI/CD</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                          >DevOps</span
+                        >
+                      </div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-lock mr-1"></i> Repositories Private
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- QiSat: DevOps Implement CI/CD -->
+            <li class="ms-6 mb-10">
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100 text-yellow-600 ring-4 ring-white dark:bg-yellow-900 dark:text-yellow-300 dark:ring-gray-900"
+                >
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300"
+                >
+                  2020-2021
+                </div>
+              </div>
+              <!-- accordion -->
+              <div class="accordion-collapse" data-accordion="collapse">
+                <div
+                  class="mb-2 overflow-hidden rounded-lg border-l-4 border-green-500"
+                >
+                  <!-- button -->
+                  <h2 id="headingOne">
+                    <button
+                      type="button"
+                      class="flex w-full items-center justify-between bg-white p-5 text-left font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+                      data-accordion-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <div
+                        class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 transition-all duration-300 dark:bg-green-900 dark:text-green-300"
+                      >
+                        <i class="fas fa-server"></i>
+                      </div>
+                      <div class="mr-auto">
+                        <h3
+                          class="text-lg font-bold text-gray-900 dark:text-white"
+                        >
+                          QiSat: DevOps QiSat
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2020-2021
+                        </p>
+                      </div>
+
+                      <svg
+                        data-accordion-icon
+                        class="h-3 w-3 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        ></path>
+                      </svg>
+                    </button>
+                  </h2>
+                  <!-- context -->
+                  <div
+                    id="collapseOne"
+                    class="hidden"
+                    aria-labelledby="headingOne"
+                  >
+                    <div class="bg-gray-50 p-5 dark:bg-gray-800">
+                      <p class="mb-4 text-gray-600 dark:text-gray-300">
+                        Implement CI/CD and DevOps in the company QiSat.
+                        Softwares installed and configured in structures
+                        internal of the company.
+                      </p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span
+                          class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                          >Gitlab</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                          >Traefik</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                          >Portainer</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-indigo-100 px-3 py-1 text-xs text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                          >Docker</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-600 dark:text-gray-200"
+                          >Linux</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-yellow-100 px-3 py-1 text-xs text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                          >CI/CD</span
+                        >
+                        <span
+                          class="tech-tag rounded-full bg-red-100 px-3 py-1 text-xs text-red-800 dark:bg-red-900 dark:text-red-200"
+                          >DevOps</span
+                        >
+                      </div>
+                      <div class="flex flex-wrap gap-3">
+                        <a
+                          href="https://github.com/leonardodg/traefik"
+                          target="_blank"
+                          class="flex items-center text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          <i class="fab fa-github mr-1"></i> Project Learn
+                          settings
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="ms-6 mb-10">
+              <!-- QiSat 2022: DevOps QiSat -->
+
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100 text-yellow-600 ring-4 ring-white dark:bg-yellow-900 dark:text-yellow-300 dark:ring-gray-900"
+                >
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300"
+                >
+                  2024
+                </div>
+              </div>
+
+              <div
+                class="rounded-lg border-l-4 border-green-500 bg-white p-6 shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
               >
-                Project 3
-              </h3>
-              <time
-                class="mb-2 block text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
-                >Released on December 2nd, 2021</time
+                <div class="mb-4 flex items-center">
+                  <div
+                    class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 transition-all duration-300 dark:bg-green-900 dark:text-green-300"
+                  >
+                    <i class="fas fa-server"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                      QiSat: DevOps QiSat
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">2022</p>
+                  </div>
+                </div>
+                <p class="mb-4 text-gray-600 dark:text-gray-300">
+                  Migration CI/CD and DevOps in the company QiSat to AWS and
+                  Github
+                </p>
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span
+                    class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                    >Github</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-800 dark:bg-orange-900 dark:text-orange-200"
+                    >AWS</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                    >CI/CD</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                    >DevOps</span
+                  >
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  <i class="fas fa-lock mr-1"></i> Repositories Private
+                </p>
+              </div>
+            </li>
+
+            <li class="ms-6 mb-10">
+              <!-- QiSat 2022: DevOps QiSat -->
+
+              <div class="timeline-point">
+                <span
+                  class="absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100 text-yellow-600 ring-4 ring-white dark:bg-yellow-900 dark:text-yellow-300 dark:ring-gray-900"
+                >
+                  <i class="fas fa-calendar-alt fa-lg"></i>
+                </span>
+                <div
+                  class="my-2 inline-block rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300"
+                >
+                  2024
+                </div>
+              </div>
+
+              <div
+                class="rounded-lg border-l-4 border-green-500 bg-white p-6 shadow transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
               >
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Get started with dozens of web components and interactive
-                elements built on top of Tailwind CSS.
-              </p>
+                <div class="mb-4 flex items-center">
+                  <div
+                    class="timeline-icon mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 transition-all duration-300 dark:bg-green-900 dark:text-green-300"
+                  >
+                    <i class="fas fa-server"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                      QiSat: DevOps QiSat
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">2022</p>
+                  </div>
+                </div>
+                <p class="mb-4 text-gray-600 dark:text-gray-300">
+                  Migration CI/CD and DevOps in the company QiSat to AWS and
+                  Github
+                </p>
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span
+                    class="tech-tag rounded-full bg-green-100 px-3 py-1 text-xs text-green-800 dark:bg-green-900 dark:text-green-200"
+                    >Github</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-800 dark:bg-orange-900 dark:text-orange-200"
+                    >AWS</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-purple-100 px-3 py-1 text-xs text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+                    >CI/CD</span
+                  >
+                  <span
+                    class="tech-tag rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                    >DevOps</span
+                  >
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  <i class="fas fa-lock mr-1"></i> Repositories Private
+                </p>
+              </div>
             </li>
           </ol>
         </div>
